@@ -11,7 +11,7 @@ class QuestionController extends Controller
     {
         Question::query()->create(
             $request->validate([
-                'question' => ['required', 'string', 'max:260'],
+                'question' => ['required', 'string', 'max:260', 'min:10'],
             ])
         );
 
